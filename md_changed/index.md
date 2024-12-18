@@ -3,4 +3,8 @@ title: Home page
 ---
 
 Navigate to:
-- [Kilosort](2024-09-17 Kilosort4.md)
+- [Kilosort](md_changed/2024-09-17%20Kilosort4.md)
+
+$$
+E = mc^2
+$$
