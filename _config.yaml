@@ -16,10 +16,6 @@ nav:
   - title: Kilosort
     url: /2024-09-17-kilosort4.md
 
-# # MathJax support for LaTeX rendering
-# kramdown:
-#   math_engine: mathjax
-
-# # Optional: To load MathJax script manually (if necessary)
-# plugins:
-#   - jekyll-mathjax
+# MathJax support for LaTeX rendering
+kramdown:
+  math_engine: mathjax
