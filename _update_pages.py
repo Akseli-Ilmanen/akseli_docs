@@ -61,8 +61,8 @@ for md_file in markdown_files:
         for pattern, replacement in replacements.items():
             content = re.sub(pattern, replacement, content)
         
-        # Add 'usemathjax: true' below the first '---'
-        content = re.sub(r'^(---\s*\n)', r'\1usemathjax: true\n', content, count=1)
+        # # Add 'usemathjax: true' below the first '---'
+        # content = re.sub(r'^(---\s*\n)', r'\1usemathjax: true\n', content, count=1)
     
     # Write the modified content to the destination file
     destination_path = os.path.join(curr_directory, md_file)
