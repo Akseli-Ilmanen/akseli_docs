@@ -11,10 +11,6 @@ sass:
 include:
   - styles.css
 
-# Exclude .py files and their folder
-exclude:
-  - _scripts/
-
 # Navigation for subpages
 nav:
   - title: Kilosort
