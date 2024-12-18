@@ -16,8 +16,6 @@ nav:
   - title: Kilosort
     url: /2024-09-17-kilosort4.md
 
-# MathJax support for LaTeX rendering
-kramdown:
-  math_engine: katex
-  syntax_highlighter: rouge
 
+# Enable MathJax globally (for all pages)
+mathjax: true
