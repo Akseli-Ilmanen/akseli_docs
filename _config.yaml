@@ -19,11 +19,3 @@ nav:
 # MathJax support for LaTeX rendering
 kramdown:
   math_engine: mathjax
-
-# MathJax configuration
-mathjax:
-  config: "TeX-AMS-MML_HTMLorMML"
-  tex2jax:
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-    displayMath: [['$$', '$$']]
-    processEscapes: true
