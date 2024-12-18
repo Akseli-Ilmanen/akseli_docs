@@ -1,4 +1,5 @@
 ---
+usemathjax: true
 tags: #methods
 ---
 Tags: [[Crow project]]
@@ -58,8 +59,7 @@ Tags: [[Crow project]]
 - .bin - binarized data in column format:
 	- n_rows = number of samples (each time sample has duration $$\frac{1}{\text{sampling rate}} =\frac{1}{30000} =0.33ms$)
 	- n_cols = number of channels
-	- values in cells = since extracellular recordings, presumably in $$\mu V$
-
+	- values in cells = since extracellular recordings, presumably in $$\mu V$$ 
 ![image](images/Pasted image 20241101150221.png)
 - converted .ap.bin file to df for understanding
 - duration of recording: num rows/fs = $$\frac{2700000}{300000}= 90s$$ ([[2024-11-01 Sampling rate & number of data points]])
@@ -163,7 +163,7 @@ spike_times.npy : shape (n_spikes,)
 	`st`
 	Sample index of the waveform peak for each spike.
 
-templates.npy : shape (n_templates, nt, n_channels $$\rightarrow$$ $$i, t, j$)
+templates.npy : shape (n_templates, nt, n_channels $$\rightarrow$ $i, t, j$)
 	Full time x channels template shapes.
 	- e.g. (n_templates, nt, n_channels) = (396, 62, 384)
 		- where nt = number of time points in each template (template length: $$5ms$)
