@@ -5,7 +5,6 @@ import shutil
 # Get the current working directory
 curr_directory = os.getcwd()
 
-
 # Step 1: COPY IMAGES TO DESTINATION FOLDER AND EDIT MARKDOWN FILES
 
 # Navigate two levels up
@@ -61,6 +60,9 @@ for md_file in markdown_files:
         # Apply the replacements
         for pattern, replacement in replacements.items():
             content = re.sub(pattern, replacement, content)
+        
+        # Add 'usemathjax: true' below the first '---'
+        content = re.sub(r'^(---\s*\n)', r'\1usemathjax: true\n', content, count=1)
     
     # Write the modified content to the destination file
     destination_path = os.path.join(curr_directory, md_file)
