@@ -1,0 +1,16 @@
+theme: minima
+title: Akseli Docs
+description: Documentation for crow lab.
+markdown: kramdown
+
+# Exclude .py files and their folder
+exclude:
+  - _scripts/
+  - _scripts/*
+
+# Navigation for subpages
+nav:
+  - title: Home
+    url: /
+  - title: Kilosort
+    url: /2024-09-17 Kilosort4.md
