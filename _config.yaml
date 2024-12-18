@@ -14,20 +14,16 @@ include:
 # Exclude .py files and their folder
 exclude:
   - _scripts/
-  - _scripts/*
 
 # Navigation for subpages
 nav:
   - title: Kilosort
-    url: /md_changed/2024-09-17 Kilosort4.md
+    url: /md_changed/2024-09-17-kilosort4.md
 
 # MathJax support for LaTeX rendering
 kramdown:
   math_engine: mathjax
-  mathjax:
-    cdn: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 
 # Optional: To load MathJax script manually (if necessary)
-# This ensures MathJax is loaded on your pages
 plugins:
   - jekyll-mathjax
