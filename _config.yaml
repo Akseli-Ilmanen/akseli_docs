@@ -3,6 +3,14 @@ title: Akseli Docs
 description: Documentation for crow lab.
 markdown: kramdown
 
+# Custom CSS
+sass:
+  style: compressed
+
+# Include custom CSS
+include:
+  - styles.css
+
 # Exclude .py files and their folder
 exclude:
   - _scripts/
@@ -13,3 +21,10 @@ exclude:
 nav:
   - title: Kilosort
     url: /2024-09-17 Kilosort4.md #fdas
+
+
+# MathJax support
+kramdown:
+  math_engine: mathjax
+  mathjax:
+    cdn: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
