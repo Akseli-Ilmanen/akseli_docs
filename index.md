@@ -6,5 +6,4 @@ title: Welcome to My Site
 This is the homepage for my site.
 
 Navigate to:
-- [File 1](file1.html)
-- [File 2](file2.html)
+- [Kilosort](2024-09-17 Kilosort4.md)
