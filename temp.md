@@ -1,5 +1,4 @@
 ---
-mathjax: true
 tags: #methods
 ---
 Tags: [[Crow project]]
