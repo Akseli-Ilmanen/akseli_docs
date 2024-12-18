@@ -18,4 +18,6 @@ nav:
 
 # MathJax support for LaTeX rendering
 kramdown:
-  math_engine: mathjax
+  math_engine: katex
+  syntax_highlighter: rouge
+
