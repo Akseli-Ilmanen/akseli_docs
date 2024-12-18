@@ -29,7 +29,7 @@ print("Current Directory:", os.getcwd())
 
 # Get a list of all Markdown files in the current directory
 markdown_files = [f for f in os.listdir('.') if f.endswith('.md')]
-
+# fjdaklfdas
 # Regular expressions for the replacements
 replacements = {
     r'- !': '- ⚠️',
