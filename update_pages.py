@@ -3,7 +3,16 @@ import re
 import shutil
 
 # Set the path to the source directory containing images
-source_directory = r"C:\Users\User\OneDrive\02_Akseli_Vault\Z-Admin\image"
+# Get the current working directory
+curr_directory = os.getcwd()
+print("Current Directory:", curr_directory)
+
+# Navigate two levels up
+two_levels_up = os.path.abspath(os.path.join(curr_directory, "../../"))
+
+source_directory = os.path.join(two_levels_up, 'Z-Admin', 'image')
+
+
 # Set the destination directory for copied images
 destination_directory = os.path.join(os.getcwd(), 'images')
 
@@ -30,19 +39,13 @@ for md_file in markdown_files:
             if os.path.isfile(image_path):
                 # Copy the image to the destination folder
                 shutil.copy(image_path, destination_directory)
-                print(f"Copied: {image_name} to {destination_directory}")
-                
-                # Update the Markdown reference to point to the new location
-                new_reference = f"![[images/{image_name}]]"
-                content = content.replace(f"![[{image_name}]]", new_reference)
+
             else:
                 print(f"Image not found: {image_path}")
     
-    # Write the modified content back to the original Markdown file
-    with open(md_file, 'w', encoding='utf-8') as file:
-        file.write(content)
 
-print("Image extraction and Markdown update complete.")
+
+print("Image extraction complete.")
 
 
 # Set the source and destination directories
