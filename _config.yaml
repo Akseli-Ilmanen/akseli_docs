@@ -15,7 +15,3 @@ include:
 nav:
   - title: Kilosort
     url: /2024-09-17-kilosort4.md
-
-
-# Enable MathJax globally (for all pages)
-mathjax: true
