@@ -29,7 +29,6 @@ print("Current Directory:", os.getcwd())
 
 # Get a list of all Markdown files in the current directory
 markdown_files = [f for f in os.listdir('.') if f.endswith('.md')]
-
 # Regular expressions for the replacements
 replacements = {
     r'- !': '- ⚠️',
@@ -37,8 +36,8 @@ replacements = {
     r'- \?': '- ❓',
     r'- yes': '- ✅',
     r'- &': '- 📚',
-    r' $': ' $$',
-    r'$ ': '$$ ',
+    r' \$(?!\$)': r' $$',
+    r'\$(?!\$) ': r'$$ ',
     r'!\[\[([^]]+)\]\]': r'![image](images/\1)'
 }
 

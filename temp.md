@@ -56,13 +56,13 @@ Tags: [[Crow project]]
 - Example filename: 'ZFM-02370_mini.imec0.ap.bin'
 - .ap - action potential data, contrast with .lfp
 - .bin - binarized data in column format:
-	- n_rows = number of samples (each time sample has duration $\frac{1}{\text{sampling rate}} =\frac{1}{30000} =0.33ms$)
+	- n_rows = number of samples (each time sample has duration $$\frac{1}{\text{sampling rate}} =\frac{1}{30000} =0.33ms$)
 	- n_cols = number of channels
-	- values in cells = since extracellular recordings, presumably in $\mu V$
+	- values in cells = since extracellular recordings, presumably in $$\mu V$
 
 ![image](images/Pasted image 20241101150221.png)
 - converted .ap.bin file to df for understanding
-- duration of recording: num rows/fs = $\frac{2700000}{300000}= 90s$ ([[2024-11-01 Sampling rate & number of data points]])
+- duration of recording: num rows/fs = $$\frac{2700000}{300000}= 90s$$ ([[2024-11-01 Sampling rate & number of data points]])
 
 ##### Data loading
 
@@ -89,7 +89,7 @@ results_dir = Path(settings['data_dir']).joinpath('kilosort4')
 ```
 
 
-- ⚠️ `results_dir` / ``docs\tutorials\kilosort4`` $\rightarrow$ where during `run_kilosort` all the output files are stored, 
+- ⚠️ `results_dir` / ``docs\tutorials\kilosort4`` $$\rightarrow$$ where during `run_kilosort` all the output files are stored, 
 
 ```python
 ops, st, clu, tF, Wall, similar_templates, is_ref, est_contam_rate, kept_spikes = \
@@ -163,10 +163,10 @@ spike_times.npy : shape (n_spikes,)
 	`st`
 	Sample index of the waveform peak for each spike.
 
-templates.npy : shape (n_templates, nt, n_channels $\rightarrow$ $i, t, j$)
+templates.npy : shape (n_templates, nt, n_channels $$\rightarrow$$ $$i, t, j$)
 	Full time x channels template shapes.
 	- e.g. (n_templates, nt, n_channels) = (396, 62, 384)
-		- where nt = number of time points in each template (template length: $5ms$)
+		- where nt = number of time points in each template (template length: $$5ms$)
 
 
 
@@ -177,7 +177,7 @@ templates.npy : shape (n_templates, nt, n_channels $\rightarrow$ $i, t, j$)
 - example of 3 different templates, for all nt (x-axis) and all channels (colours)
 
 
-- ⚠️ `Templates (n_templates, nt, n_channels)` are averaged waveforms (over $5ms$ with 60 nt) for all the neurons detected within the same cluster. `chan_best` is a list indexed by `n_templates` that for each template describes which channel has the most representative sum of detected waveforms similar to the template waveform
+- ⚠️ `Templates (n_templates, nt, n_channels)` are averaged waveforms (over $$5ms$$ with 60 nt) for all the neurons detected within the same cluster. `chan_best` is a list indexed by `n_templates` that for each template describes which channel has the most representative sum of detected waveforms similar to the template waveform
 
 - ❓ `chan_best = chan_map[chan_best]`
 
@@ -193,9 +193,9 @@ chan_best = (templates**2).sum(axis=1).argmax(axis=-1)
 ```
 
 
-- $i$ - templates, $t$ - time points 
-- `.sum(axis=1)` $\rightarrow$ summing over time points (axis=1) $$\text{sum\_squared}[i,j] = \sum_{t=1}^{62} (\text{templates}[i,t,j])^2 $$
-- Then apply `.argmax(axis=-1)` $\rightarrow$ index of the maximum value along **`axis=-1`**, which corresponds to the channels $j$
+- $$i$$ - templates, $$t$$ - time points 
+- `.sum(axis=1)` $$\rightarrow$$ summing over time points (axis=1) $$\text{sum\_squared}[i,j] = \sum_{t=1}^{62} (\text{templates}[i,t,j])^2 $$
+- Then apply `.argmax(axis=-1)` $$\rightarrow$$ index of the maximum value along **`axis=-1`**, which corresponds to the channels $$j$
 $$\text{chan\_best}[i]=\text{argmax}​(\text{sum\_squared}[i,j])$$
 
 
@@ -224,7 +224,7 @@ clu = np.load(results_dir / 'spike_clusters.npy')
 firing_rates = np.unique(clu, return_counts=True)[1] * 30000 / st.max()
 ```
 
-- ⚠️ $\text{firing\_rate} = \frac{\text{spike count}}{T} \times f_{s}$ 
+- ⚠️ $$\text{firing\_rate} = \frac{\text{spike count}}{T} \times f_{s}$$ 
 - ([[2024-11-01 Sampling rate & number of data points]])
 
 ```python
@@ -234,7 +234,7 @@ Unique elements: [1 2 4]
 Counts: [1 3 2]
 ```
 
-`clu`: shape(n_spikes) $\rightarrow$ ``firing_rates``: shape(n_templates)
+`clu`: shape(n_spikes) $$\rightarrow$$ ``firing_rates``: shape(n_templates)
 
 ![image](images/Pasted image 20241101234233.png)
 
