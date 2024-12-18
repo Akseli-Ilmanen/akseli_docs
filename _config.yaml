@@ -18,7 +18,7 @@ exclude:
 # Navigation for subpages
 nav:
   - title: Kilosort
-    url: /md_changed/2024-09-17-kilosort4.md
+    url: /2024-09-17-kilosort4.md
 
 # MathJax support for LaTeX rendering
 kramdown:
