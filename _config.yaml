@@ -7,10 +7,13 @@ markdown: kramdown
 exclude:
   - _scripts/
   - _scripts/*
+  - _config.yaml
+  - images/
+  - images/*
 
 # Navigation for subpages
 nav:
   - title: Home
     url: /
   - title: Kilosort
-    url: /file1.md
+    url: /file1.md #fdas
