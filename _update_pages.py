@@ -40,14 +40,19 @@ replacements = {
     r'!\[\[([^]]+)\]\]': r'![image](images/\1)'  # Convert image references to the new format
 }
 
-# Function to process math blocks in two stages
-def process_math_blocks(content):
+# Function to process math blocks by temporarily replacing $$ blocks
+def process_math_blocks_first(content):
+    # Replace $$ blocks with unique placeholders
+    content = re.sub(r'(\n?)\$\$(.*?)\$\$', r'\1{{MATH_BLOCK}}\2{{/MATH_BLOCK}}', content, flags=re.DOTALL)
+    return content
 
-    content = re.sub(r'\n\$\$(.*?)\n\$\$', r'\n$$\1\n$$', content, flags=re.DOTALL)
-
-
-    # Stage 3: Replace $...$ with $$...$$ (after Stage 2 is complete)
+# Function to process math blocks by replacing single $...$ with $$...$$ and restoring $$ blocks
+def process_math_blocks_second(content):
+    # Replace single $...$ with $$...$$
     content = re.sub(r'(?<!\$)\$(.*?)\$(?!\$)', r'$$\1$$', content)
+
+    # Restore the $$ blocks back to their original format
+    content = content.replace('{{MATH_BLOCK}}', '\n$$').replace('{{/MATH_BLOCK}}', '\n$$\n')
     
     return content
 
@@ -68,21 +73,32 @@ for md_file in markdown_files:
             else:
                 print(f"Image not found: {image_path}")
 
-        # Apply the replacements for other patterns
+        # Apply the replacements for other patterns (such as - !, - no, etc.)
         for pattern, replacement in replacements.items():
             content = re.sub(pattern, replacement, content)
 
-        # Process math blocks
-        content = process_math_blocks(content)
+        # Step 1: Process math blocks by replacing $$ blocks with placeholders
+        content = process_math_blocks_first(content)
 
-        # Optional: Add 'usemathjax: true' below the first '---' in the frontmatter
-        content = re.sub(r'^(---\s*\n)', r'\1usemathjax: true\n', content, count=1)
-
-    # Write the modified content to the destination file
-    destination_path = os.path.join(curr_directory, md_file)
-    with open(destination_path, 'w', encoding='utf-8') as file:
+    # Write the adjusted markdown file after the first processing step
+    adjusted_md_file = os.path.join(curr_directory, f"{md_file}")
+    with open(adjusted_md_file, 'w', encoding='utf-8') as file:
         file.write(content)
 
-    print(f"Processed {md_file}")
+    print(f"First processing step complete for {md_file}. Adjusted markdown saved as {adjusted_md_file}")
+
+    # Step 2: Now, read the adjusted markdown file and apply the second processing step
+    with open(adjusted_md_file, 'r', encoding='utf-8') as file:
+        adjusted_content = file.read()
+
+        # Step 2: Replace single $...$ with $$...$$ and restore $$ blocks
+        adjusted_content = process_math_blocks_second(adjusted_content)
+
+    # Write the final modified content back to the original file or new file
+    final_md_file = os.path.join(curr_directory, f"{md_file}")
+    with open(final_md_file, 'w', encoding='utf-8') as file:
+        file.write(adjusted_content)
+
+    print(f"Second processing step complete for {md_file}. Final markdown saved as {final_md_file}")
 
 print("Image extraction and markdown file processing complete.")
