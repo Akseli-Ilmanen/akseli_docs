@@ -29,7 +29,7 @@ print("Current Directory:", os.getcwd())
 
 # Get a list of all Markdown files in the current directory
 markdown_files = [f for f in os.listdir('.') if f.endswith('.md')]
-# fjdaklfdas
+
 # Regular expressions for the replacements
 replacements = {
     r'- !': '- ⚠️',
@@ -40,11 +40,14 @@ replacements = {
     r'!\[\[([^]]+)\]\]': r'![image](images/\1)'  # Convert image references to the new format
 }
 
-# Function to replace $ with $$, ensuring $$ isn't already present
-def replace_dollars(content):
-    # Replace $ with $$ if not already inside a $$ block
-    content = re.sub(r'(?<!\$)\s\$(?!\$)', r' $$', content)  # Space followed by $
-    content = re.sub(r'(?<!\$)\$\s(?!\$)', r'$$ ', content)  # $ followed by space
+# Function to process math blocks in two stages
+def process_math_blocks(content):
+
+    content = re.sub(r'\n\$\$(.*?)\n\$\$', r'\n$$\1\n$$', content, flags=re.DOTALL)
+
+
+    # Stage 3: Replace $...$ with $$...$$ (after Stage 2 is complete)
+    content = re.sub(r'(?<!\$)\$(.*?)\$(?!\$)', r'$$\1$$', content)
     
     return content
 
@@ -69,8 +72,8 @@ for md_file in markdown_files:
         for pattern, replacement in replacements.items():
             content = re.sub(pattern, replacement, content)
 
-        # Apply dollar sign replacement
-        content = replace_dollars(content)
+        # Process math blocks
+        content = process_math_blocks(content)
 
         # Optional: Add 'usemathjax: true' below the first '---' in the frontmatter
         content = re.sub(r'^(---\s*\n)', r'\1usemathjax: true\n', content, count=1)

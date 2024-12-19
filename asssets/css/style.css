@@ -1,0 +1,16 @@
+/* Change color of headings */
+h2 {
+    color: #4682b4; /* Steel blue for H2 */
+}
+h3 {
+    color: #32cd32; /* Lime green for H3 */
+}
+h4 {
+    color: #ffa500; /* Orange for H4 */
+}
+h5 {
+    color: #9370db; /* Medium purple for H5 */
+}
+h6 {
+    color: #2e8b57; /* Sea green for H6 */
+}
