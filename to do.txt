@@ -1,0 +1,13 @@
+import re
+
+# Function to replace $ with $$, ensuring $$ isn't already present
+def replace_dollars(content):
+    # Step 1: Replace inline single $ with $$ (if not already inside $$)
+    content = re.sub(r'(?<!\$)\s\$(?!\$)', r' $$', content)  # Space followed by $
+    content = re.sub(r'(?<!\$)\$\s(?!\$)', r'$$ ', content)  # $ followed by space
+    
+    # Step 2: If a block of $$ is already present, make sure it's formatted as a block:
+    # Add a newline before and after existing $$ ... $$ blocks to make them block math in markdown
+    content = re.sub(r'(\$\$)(.*?)(\$\$)', r'\n\1\2\3\n', content, flags=re.DOTALL)  # Ensure block math is separated by newlines
+
+    return content
