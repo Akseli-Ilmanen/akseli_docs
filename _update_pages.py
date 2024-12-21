@@ -38,6 +38,7 @@ replacements = {
     r'- yes': '- ✅',
     r'- &': '- 📚',
     r'!\[\[([^]]+)\]\]': r'![image](images/\1)'  # Convert image references to the new format
+    
 }
 
 # Function to process math blocks by temporarily replacing $$ blocks
