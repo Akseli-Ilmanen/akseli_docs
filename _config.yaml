@@ -2,6 +2,12 @@ theme: minima
 title: Akseli Docs
 description: Documentation for crow lab.
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  parse_block_html: true
+  syntax_highlighter_opts:
+    disable: true
 
 # Custom CSS
 sass:
@@ -15,3 +21,7 @@ include:
 nav:
   - title: Kilosort
     url: /2024-09-17-kilosort4.md
+
+  - title: Sync zotero with overleaf via onedrive
+    url: /2024-12-16 Sync zotero with ovleaf over onedrive.md
+

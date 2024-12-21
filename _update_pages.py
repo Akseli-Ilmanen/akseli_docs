@@ -27,8 +27,8 @@ image_reference_pattern = r'!\[\[([^]]+)\]\]'
 os.chdir(os.path.join(three_levels_up, 'Projects', 'Copy to github pages'))
 print("Current Directory:", os.getcwd())
 
-# Get a list of all Markdown files in the current directory
-markdown_files = [f for f in os.listdir('.') if f.endswith('.md')]
+# Get a list of all Markdown files in the current directory except index.md
+markdown_files = [f for f in os.listdir('.') if f.endswith('.md') and f != 'index.md']
 
 # Regular expressions for the replacements
 replacements = {
@@ -101,5 +101,3 @@ for md_file in markdown_files:
         file.write(adjusted_content)
 
     print(f"Second processing step complete for {md_file}. Final markdown saved as {final_md_file}")
-
-print("Image extraction and markdown file processing complete.")
