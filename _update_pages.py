@@ -57,6 +57,22 @@ def process_math_blocks_second(content):
     
     return content
 
+
+# Function to add "# filename" below the second occurrence of "---"
+def add_filename_below_second_dash(content, filename):
+    dash_count = 0
+    lines = content.split('\n')
+    for i, line in enumerate(lines):
+        if line.strip() == '---':
+            dash_count += 1
+        if dash_count == 2:
+            # Insert "# filename" after the second "---"
+            lines.insert(i + 1, f"# {filename}")
+            break
+    return '\n'.join(lines)
+
+
+
 # Iterate through each Markdown file
 for md_file in markdown_files:
     with open(md_file, 'r', encoding='utf-8') as file:
@@ -80,6 +96,10 @@ for md_file in markdown_files:
 
         # Step 1: Process math blocks by replacing $$ blocks with placeholders
         content = process_math_blocks_first(content)
+
+
+        # Add "# filename" below the second "---"
+        content = add_filename_below_second_dash(content, md_file)
 
     # Write the adjusted markdown file after the first processing step
     adjusted_md_file = os.path.join(curr_directory, f"{md_file}")
