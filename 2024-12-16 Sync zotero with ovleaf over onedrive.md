@@ -1,7 +1,7 @@
 ---
+title: 2024-12-16 Sync zotero with ovleaf over onedrive
 tags: #conceptual
 ---
-title: 2024-12-16 Sync zotero with ovleaf over onedrive
 Steps
 
 1. Zotero export specific folder as bibtext file to onedrive folder
