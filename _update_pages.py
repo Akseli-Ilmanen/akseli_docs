@@ -38,8 +38,30 @@ replacements = {
     r'- yes': '- ✅',
     r'- &': '- 📚',
     r'!\[\[([^]]+)\]\]': r'![image](images/\1)'  # Convert image references to the new format
-    
 }
+
+# Function to add or update the title in the YAML front matter
+def add_title_to_front_matter(content, filename):
+    lines = content.split('\n')
+    in_yaml_block = False
+    updated_lines = []
+    yaml_processed = False
+
+    for line in lines:
+        if line.strip() == "---":
+            updated_lines.append(line)
+            if not in_yaml_block:
+                in_yaml_block = True
+            else:
+                if not yaml_processed:
+                    # Insert title before closing the YAML block
+                    updated_lines.append(f"title: {filename}")
+                    yaml_processed = True
+                in_yaml_block = False
+        else:
+            updated_lines.append(line)
+
+    return '\n'.join(updated_lines)
 
 # Function to process math blocks by temporarily replacing $$ blocks
 def process_math_blocks_first(content):
@@ -56,25 +78,6 @@ def process_math_blocks_second(content):
     content = content.replace('{{MATH_BLOCK}}', '\n$$').replace('{{/MATH_BLOCK}}', '\n$$\n')
     
     return content
-
-
-def add_filename_below_second_dash(content, filename):
-    dash_count = 0
-    lines = content.split('\n')
-    for i, line in enumerate(lines):
-        if line.strip() == '---':
-            dash_count += 1
-        if dash_count == 2:
-            # Check if the next line already starts with "# "
-            if i + 1 < len(lines) and lines[i + 1].startswith("# "):
-                return content  # Return the content as is if filename heading already exists
-            # Insert "# filename" after the second "---"
-            lines.insert(i + 1, f"## {filename}")
-            break
-    return '\n'.join(lines)
-
-
-
 
 # Iterate through each Markdown file
 for md_file in markdown_files:
@@ -100,9 +103,8 @@ for md_file in markdown_files:
         # Step 1: Process math blocks by replacing $$ blocks with placeholders
         content = process_math_blocks_first(content)
 
-
-        # Add "# filename" below the second "---"
-        content = add_filename_below_second_dash(content, md_file)
+        # Add title to the YAML front matter
+        content = add_title_to_front_matter(content, os.path.splitext(md_file)[0])
 
     # Write the adjusted markdown file after the first processing step
     adjusted_md_file = os.path.join(curr_directory, f"{md_file}")
