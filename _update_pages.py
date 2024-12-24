@@ -58,7 +58,6 @@ def process_math_blocks_second(content):
     return content
 
 
-# Function to add "# filename" below the second occurrence of "---"
 def add_filename_below_second_dash(content, filename):
     dash_count = 0
     lines = content.split('\n')
@@ -66,10 +65,14 @@ def add_filename_below_second_dash(content, filename):
         if line.strip() == '---':
             dash_count += 1
         if dash_count == 2:
+            # Check if the next line already starts with "# "
+            if i + 1 < len(lines) and lines[i + 1].startswith("# "):
+                return content  # Return the content as is if filename heading already exists
             # Insert "# filename" after the second "---"
             lines.insert(i + 1, f"# {filename}")
             break
     return '\n'.join(lines)
+
 
 
 
