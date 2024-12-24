@@ -69,7 +69,7 @@ def add_filename_below_second_dash(content, filename):
             if i + 1 < len(lines) and lines[i + 1].startswith("# "):
                 return content  # Return the content as is if filename heading already exists
             # Insert "# filename" after the second "---"
-            lines.insert(i + 1, f"# {filename}")
+            lines.insert(i + 1, f"## {filename}")
             break
     return '\n'.join(lines)
 
