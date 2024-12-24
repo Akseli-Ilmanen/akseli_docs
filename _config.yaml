@@ -11,7 +11,3 @@ sass:
 include:
   - styles.css
 
-# Navigation for subpages
-nav:
-  - title: Kilosort
-    url: /2024-09-17-kilosort4.md
