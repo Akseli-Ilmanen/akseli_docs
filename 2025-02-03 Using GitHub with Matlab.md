@@ -79,5 +79,5 @@ git clone https://github.com/Akseli-Ilmanen/Pipeline_Akseli
 - If the remote repository is updated by another user, you can `pull` an updated version of this repository to your local folder. You can perform this step very easily by just clicking on the `pull_repo_this_folder.bat` file in the file explorer.
 
 - ❌ This step only makes sense if you would like to discard local changes, and update your local folder with the remote version. If you would like to keep parts of your local folder and only get parts of the remote version, you can explore commands such as `fetch` and `merge`.
-
+ 
 
