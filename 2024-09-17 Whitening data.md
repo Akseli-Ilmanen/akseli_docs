@@ -5,9 +5,11 @@ mathjax: true
 mathjax: true
 tags: #conceptual
 ---
-Tags: [[Tü - Introduction to Machine Learning]], [[2023-12-07 Covariance matrix]], [[2023-12-03 Eigenvalues & Eigenvectors]], [[2024-09-18 White noise]]
+Tags:  ,  ,  ,  
 
-<br/><br/>##<br/><br/># ZCA whitening matrix.
+<br/><br/>
+##<br/><br/>
+# ZCA whitening matrix.
 
 Steps:
 1. Zero-center data (Divide by mean $$\mathbf{\bar{x}}$$)
@@ -47,11 +49,13 @@ where:
 
 ![image](images/2024-09-17 Whitening data 2024-09-18.excalidraw)
 
-- bottom: [[2023-12-07 Covariance matrix]]
-- ⚠️ Note during decorrelation step, covariance $$\rightarrow$$ 0 (implicit in definition of [[2024-09-18 White noise]]) and during ZCA whitening step $$\rightarrow$$ variance of each diagonal equals 1
+- bottom:  
+- ⚠️ Note during decorrelation step, covariance $$\rightarrow$$ 0 (implicit in definition of  ) and during ZCA whitening step $$\rightarrow$$ variance of each diagonal equals 1
 
 
-<br/><br/>##<br/><br/># Kilosort implementation
+<br/><br/>
+##<br/><br/>
+# Kilosort implementation
 
 `wrot` $$\rightarrow$$ $$W_{\text{ZCA}}$$
 
@@ -72,9 +76,11 @@ def whitening_from_covariance(CC):
 
 
 
-<br/><br/>##<br/><br/># For me
+<br/><br/>
+##<br/><br/>
+# For me
 
 #todo 
-- [ ] [[Samuel]] understand relationship between eigenvector and change of basis and and dot product
+- [ ]   understand relationship between eigenvector and change of basis and and dot product
 
 ![image](images/2024-09-17 Whitening data 2024-09-18_0.excalidraw)

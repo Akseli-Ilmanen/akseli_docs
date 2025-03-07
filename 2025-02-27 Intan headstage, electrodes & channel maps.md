@@ -4,7 +4,7 @@ layout: default
 mathjax: true
 tags: #project
 ---
-Tags: [[Crow project]]
+Tags:  
 - 📚 ADXL355 accelerometer: [Accelerometer Calibration](https://intantech.com/files/Intan_RHD2000_accelerometer_calibration.pdf) & [ADXL354/ADXL355 (Rev. A)](https://www.analog.com/media/en/technical-documentation/data-sheets/adxl354_355.pdf) 
 - 📚 RHD 2132: https://intantech.com/files/Intan_RHD2000_series_datasheet.pdf
 - 📚 Cambridge Neurotech dimensions: [Cambridge NeuroTech Product Catalog | PDF](https://www.scribd.com/document/771039846/Cambridge-NeuroTech-Product-Catalog)
@@ -44,7 +44,8 @@ Tags: [[Crow project]]
 
 - ⚠️ Channelmap column (if contact ID col sorted from 1-16) $$\rightarrow$$ 
 ```python
-<br/><br/># ASSY-79 P-1 & P-2/E-1 & E-2
+<br/><br/>
+# ASSY-79 P-1 & P-2/E-1 & E-2
 chanMap = np.array([20, 19, 21, 18, 22, 17, 23, 16, 8, 15, 9, 14, 10, 13, 11, 12])
 ```
 
