@@ -86,4 +86,3 @@ git clone https://github.com/Akseli-Ilmanen/Pipeline_Akseli
 
 - ❌ This step only makes sense if you would like to discard local changes, and update your local folder with the remote version. If you would like to keep parts of your local folder and only get parts of the remote version, you can explore commands such as `fetch` and `merge`.
 <br>
-

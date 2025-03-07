@@ -64,41 +64,41 @@ def process_math_blocks_second(content):
     
     return content
 
-def insert_br_after_last_table_line(text):
+# New helper function to process content while skipping table rows
+def process_content_excluding_tables(content, replacements):
     """
-    Inserts a <br> after the last line in any consecutive block of Markdown table lines.
-    
-    A Markdown table line is defined here as any line that starts with '|' and ends with '|'.
-    We then use a negative lookahead (?!\|) to ensure we only match when the *next* line does 
-    not also start with '|'.
+    Process each line with regex substitutions only if the line is not part of a table.
+    A table line is assumed to start with a pipe character (|) possibly after some whitespace.
     """
-    pattern = r'^(\|.*\|)\n(?!\|)'
-    replacement = r'\1\n<br>\n'
-    return re.sub(pattern, replacement, text, flags=re.MULTILINE)
-
+    processed_lines = []
+    for line in content.splitlines():
+        # Check if the line is a table row (starts with a pipe, possibly after whitespace)
+        if re.match(r'^\s*\|', line):
+            processed_lines.append(line)
+        else:
+            for pattern, replacement in replacements.items():
+                line = re.sub(pattern, replacement, line)
+            processed_lines.append(line)
+    return "\n".join(processed_lines)
 
 # Iterate through each Markdown file
 for md_file in markdown_files:
     with open(md_file, 'r', encoding='utf-8') as file:
         content = file.read()
 
-        # Find all image references
+        # Find all image references and copy images to destination folder
         image_matches = re.findall(image_reference_pattern, content)
-
-        # Copy each referenced image to the destination directory
         for image_name in image_matches:
             image_path = os.path.join(source_directory, image_name)
             if os.path.isfile(image_path):
-                # Copy the image to the destination folder
                 shutil.copy(image_path, destination_directory)
             else:
                 print(f"Image not found: {image_path}")
 
-        # Apply the replacements for other patterns (such as - !, - no, etc.)
-        for pattern, replacement in replacements.items():
-            content = re.sub(pattern, replacement, content)
+        # Apply the replacements for other patterns, excluding table blocks
+        content = process_content_excluding_tables(content, replacements)
 
-        # Step 1: Process math blocks by replacing $$ blocks with placeholders
+        # Process math blocks by replacing $$ blocks with placeholders
         content = process_math_blocks_first(content)
 
         # Optional: Add 'title: filename' below the first '---' in the frontmatter
@@ -106,7 +106,6 @@ for md_file in markdown_files:
                          rf'\1title: {os.path.splitext(md_file)[0]}\nlayout: default \nmathjax: true\n', 
                          content, 
                          count=1)
-
 
     # Write the adjusted markdown file after the first processing step
     adjusted_md_file = os.path.join(curr_directory, f"{md_file}")
@@ -119,14 +118,11 @@ for md_file in markdown_files:
     with open(adjusted_md_file, 'r', encoding='utf-8') as file:
         adjusted_content = file.read()
 
-        # Step 2: Replace single $...$ with $$...$$ and restore $$ blocks
+        # Replace single $...$ with $$...$$ and restore $$ blocks
         adjusted_content = process_math_blocks_second(adjusted_content)
 
-        # Place breakpoint in empty lines, so empty lines are rendered
+        # Place breakpoint in empty lines so empty lines are rendered
         adjusted_content = re.sub(r'\n \n', '\n<br>\n', adjusted_content, flags=re.MULTILINE)
-
-
-        adjusted_content = insert_br_after_last_table_line(adjusted_content)
 
     # Write the final modified content back to the original file or new file
     final_md_file = os.path.join(curr_directory, f"{md_file}")

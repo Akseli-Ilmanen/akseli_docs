@@ -13,7 +13,6 @@ Tags:
 | ----------------- | ------------ | ------------------- | -------------------------------------------------------------------------------------------------- |
 | ASSY-79 E-1 & E-2 | 16           | Cambridge Neurotech | [ASSY-79-E-1-E-2-map.pdf](https://www.cambridgeneurotech.com/assets/files/ASSY-79-E-1-E-2-map.pdf) |
 | ASSY-79 P-1 & P-2 | 16           | Cambridge Neurotech | [ASSY-79-P-1-P-2-map.pdf](https://www.cambridgeneurotech.com/assets/files/ASSY-79-P-1-P-2-map.pdf) |
-<br>
 
 ![image](images/Pasted image 20250227185300.png)
 
@@ -41,7 +40,6 @@ Tags:
 | 14                                       | in13                    |
 | 15                                       | in11                    |
 | 16                                       | in12                    |
-<br>
 
 
 - ⚠️ Channelmap column (if contact ID col sorted from 1-16) $$\rightarrow$$ 
@@ -52,5 +50,4 @@ chanMap = np.array([20, 19, 21, 18, 22, 17, 23, 16, 8, 15, 9, 14, 10, 13, 11, 12
 
 
 ![image](images/Pasted image 20250227185402.png)
-
 

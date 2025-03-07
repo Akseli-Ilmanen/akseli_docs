@@ -79,4 +79,4 @@ def whitening_from_covariance(CC):
 #todo 
 - [ ]   understand relationship between eigenvector and change of basis and and dot product
 
-<br>
+ 
