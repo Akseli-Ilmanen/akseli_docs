@@ -9,6 +9,7 @@ Tags:
 ![image](images/Pasted image 20250203171701.png)
 <br>
 <br>
+<br>
 ### Set up github repository from folder
 <br>
 -  `cd` to folder which you would like to upload to github
@@ -46,9 +47,11 @@ git remote add origin https://github.com/your-username/my-project.git
 git push -u origin main
 ```
 <br>
+<br>
 ### Push and commit
 <br>
 - ⚠️ Use the `push_commit.bat` file to update commit and push changes from your local folder to the remote repository
+<br>
 <br>
 <br>
 ### Compare versions & revert to earlier version
@@ -62,6 +65,7 @@ git push -u origin main
 <br>
 <br>
 ![image](images/2025-02-03 Init from local folder 2025-02-03_0.excalidraw)
+<br>
 <br>
 <br>
 ### Clone and pull

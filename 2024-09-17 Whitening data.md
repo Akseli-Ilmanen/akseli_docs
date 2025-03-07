@@ -7,6 +7,7 @@ tags: #conceptual
 ---
 Tags:  ,  ,  ,  
 <br>
+<br>
 ### ZCA whitening matrix.
 <br>
 Steps:
@@ -51,6 +52,7 @@ where:
 - ⚠️ Note during decorrelation step, covariance $$\rightarrow$$ 0 (implicit in definition of  ) and during ZCA whitening step $$\rightarrow$$ variance of each diagonal equals 1
 <br>
 <br>
+<br>
 ### Kilosort implementation
 <br>
 `wrot` $$\rightarrow$$ $$W_{\text{ZCA}}$$
@@ -69,6 +71,7 @@ def whitening_from_covariance(CC):
     return Wrot
 <br>
 ```
+<br>
 <br>
 <br>
 <br>
