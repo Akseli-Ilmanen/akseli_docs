@@ -1,5 +1,7 @@
 ---
 title: 2025-02-27 Intan headstage, electrodes & channel maps
+layout: default 
+mathjax: true
 tags: #project
 ---
 Tags: [[Crow project]]

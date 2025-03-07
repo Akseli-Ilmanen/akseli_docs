@@ -1,5 +1,7 @@
 ---
 title: 2024-12-16 Sync zotero with overleaf over onedrive
+layout: default 
+mathjax: true
 tags: #conceptual
 ---
 Steps

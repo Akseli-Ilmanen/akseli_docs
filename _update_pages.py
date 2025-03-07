@@ -91,7 +91,10 @@ for md_file in markdown_files:
         content = process_math_blocks_first(content)
 
         # Optional: Add 'title: filename' below the first '---' in the frontmatter
-        content = re.sub(r'^(---\s*\n)', rf'\1title: {os.path.splitext(md_file)[0]}\n', content, count=1)
+        content = re.sub(r'^(---\s*\n)', 
+                         rf'\1title: {os.path.splitext(md_file)[0]}\nlayout: default \nmathjax: true\n', 
+                         content, 
+                         count=1)
 
 
     # Write the adjusted markdown file after the first processing step
