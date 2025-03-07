@@ -101,12 +101,18 @@ for md_file in markdown_files:
 
         # Process math blocks by replacing $$ blocks with placeholders
         content = process_math_blocks_first(content)
-
-        # Optional: Add 'title: filename' below the first '---' in the frontmatter
+        
+        # Optional: Add 'layout: default' and 'mathjax: true' below the first '---' in the frontmatter
         content = re.sub(r'^(---\s*\n)', 
-                         rf'\n title: {md_file}\n layout: default \nmathjax: true\n', 
-                         content, 
-                         count=1)
+                        rf'\1layout: default\nmathjax: true\n', 
+                        content, 
+                        count=1)
+
+        # Add the title below the second '---' in the frontmatter
+        content = re.sub(r'^(---\s*\n)', 
+                        rf'\1title: {md_file}\n', 
+                        content, 
+                        count=2)
         
         
 

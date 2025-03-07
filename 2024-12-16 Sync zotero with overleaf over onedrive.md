@@ -1,6 +1,6 @@
-
- title: 2024-12-16 Sync zotero with overleaf over onedrive.md
- layout: default 
+---
+title: 2024-12-16 Sync zotero with overleaf over onedrive.md
+layout: default
 mathjax: true
 tags: #conceptual
 ---

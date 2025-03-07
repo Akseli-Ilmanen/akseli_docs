@@ -1,6 +1,6 @@
-
- title: 2025-02-03 Using GitHub with Matlab.md
- layout: default 
+---
+title: 2025-02-03 Using GitHub with Matlab.md
+layout: default
 mathjax: true
 tags: #project
 ---
