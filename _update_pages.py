@@ -39,16 +39,13 @@ replacements = {
     r'- &': '- 📚',
     r'!\[\[([^]]+)\]\]': r'![image](images/\1)',  # Convert image references to the new format
     r'\[\[([^]]+)\]\]': r' ',  # Remove markdown internal links
+    r'!\[\[.*\.excalidraw\]\]': r' ',  # Remove excalidraw references
     r'###': '<br>\n##',
     r'####': '<br>\n###',
     r'#####': '<br>\n####',
     r'######': '<br>\n#####',
     r'#######': '<br>\n######',
     r'#########': '<br>\n#######'
-
-    
-
-    
 }
 
 # Function to process math blocks by temporarily replacing $$ blocks
@@ -67,7 +64,17 @@ def process_math_blocks_second(content):
     
     return content
 
-
+def insert_br_after_last_table_line(text):
+    """
+    Inserts a <br> after the last line in any consecutive block of Markdown table lines.
+    
+    A Markdown table line is defined here as any line that starts with '|' and ends with '|'.
+    We then use a negative lookahead (?!\|) to ensure we only match when the *next* line does 
+    not also start with '|'.
+    """
+    pattern = r'^(\|.*\|)\n(?!\|)'
+    replacement = r'\1\n<br>\n'
+    return re.sub(pattern, replacement, text, flags=re.MULTILINE)
 
 
 # Iterate through each Markdown file
@@ -117,6 +124,9 @@ for md_file in markdown_files:
 
         # Place breakpoint in empty lines, so empty lines are rendered
         adjusted_content = re.sub(r'\n \n', '\n<br>\n', adjusted_content, flags=re.MULTILINE)
+
+
+        adjusted_content = insert_br_after_last_table_line(adjusted_content)
 
     # Write the final modified content back to the original file or new file
     final_md_file = os.path.join(curr_directory, f"{md_file}")
