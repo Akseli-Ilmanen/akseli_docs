@@ -38,6 +38,9 @@ replacements = {
     r'- yes': '- ✅',
     r'- &': '- 📚',
     r'!\[\[([^]]+)\]\]': r'![image](images/\1)',  # Convert image references to the new format
+    r'!\[\[([^]]+)\|300\]\]': r'![image](images/\1)',
+    r'!\[\[([^]]+)\|200\]\]': r'![image](images/\1)',
+    r'!\[\[([^]]+)\|400\]\]': r'![image](images/\1)',
     r'\[\[([^]]+)\]\]': r' ',  # Remove markdown internal links
     # r'## ': '##',
     # r'###': '##',
