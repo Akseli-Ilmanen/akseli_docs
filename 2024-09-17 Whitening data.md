@@ -7,7 +7,7 @@ tags: #conceptual
 ---
 Tags:  ,  ,  ,  
 
-#### ZCA whitening matrix.
+###ZCA whitening matrix.
 
 Steps:
 1. Zero-center data (Divide by mean $$\mathbf{\bar{x}}$$)
@@ -51,7 +51,7 @@ where:
 - ⚠️ Note during decorrelation step, covariance $$\rightarrow$$ 0 (implicit in definition of  ) and during ZCA whitening step $$\rightarrow$$ variance of each diagonal equals 1
 
 
-#### Kilosort implementation
+###Kilosort implementation
 
 `wrot` $$\rightarrow$$ $$W_{\text{ZCA}}$$
 
@@ -72,7 +72,7 @@ def whitening_from_covariance(CC):
 
 
 
-#### For me
+###For me
 
 #todo 
 - [ ]   understand relationship between eigenvector and change of basis and and dot product
