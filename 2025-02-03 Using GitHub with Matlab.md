@@ -9,7 +9,7 @@ Tags:
 ![image](images/Pasted image 20250203171701.png)
 <br>
 <br>
-###Set up github repository from folder
+#### Set up github repository from folder
 <br>
 -  `cd` to folder which you would like to upload to github
 ```cmd
@@ -46,12 +46,12 @@ git remote add origin https://github.com/your-username/my-project.git
 git push -u origin main
 ```
 <br>
-###Push and commit
+#### Push and commit
 <br>
 - ⚠️ Use the `push_commit.bat` file to update commit and push changes from your local folder to the remote repository
 <br>
 <br>
-###Compare versions & revert to earlier version
+#### Compare versions & revert to earlier version
 <br>
 - Option 1: The benefit of running `push_commit.bat` very regularly is that you can compare previous versions of your code with your current code side-by-side.
 - Option 2: You can also compare local folders with other local folders. E.g. you could `clone` and `pull` a version of your colleague's code to a separate folder, and then compare specific files with the `compare against` option.
@@ -64,7 +64,7 @@ git push -u origin main
 ![image](images/2025-02-03 Init from local folder 2025-02-03_0.excalidraw)
 <br>
 <br>
-###Clone and pull
+#### Clone and pull
 <br>
 - Navigate to the folder, where you would like the remote repository to be copied in
 ```cmd
