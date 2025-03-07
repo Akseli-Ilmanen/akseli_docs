@@ -104,7 +104,7 @@ for md_file in markdown_files:
 
         # Optional: Add 'title: filename' below the first '---' in the frontmatter
         content = re.sub(r'^(---\s*\n)', 
-                         rf'\n title={md_file} layout: default \nmathjax: true\n', 
+                         rf'\n title: {md_file}\n layout: default \nmathjax: true\n', 
                          content, 
                          count=1)
         

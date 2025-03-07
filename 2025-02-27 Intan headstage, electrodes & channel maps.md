@@ -1,5 +1,6 @@
 
- title=2025-02-27 Intan headstage, electrodes & channel maps.md layout: default 
+ title: 2025-02-27 Intan headstage, electrodes & channel maps.md
+ layout: default 
 mathjax: true
 tags: #project
 ---
