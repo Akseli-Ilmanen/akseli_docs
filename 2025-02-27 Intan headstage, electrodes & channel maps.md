@@ -44,7 +44,7 @@ Tags: [[Crow project]]
 
 - ⚠️ Channelmap column (if contact ID col sorted from 1-16) $$\rightarrow$$ 
 ```python
-# ASSY-79 P-1 & P-2/E-1 & E-2
+<br/><br/># ASSY-79 P-1 & P-2/E-1 & E-2
 chanMap = np.array([20, 19, 21, 18, 22, 17, 23, 16, 8, 15, 9, 14, 10, 13, 11, 12])
 ```
 
