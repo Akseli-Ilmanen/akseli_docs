@@ -109,7 +109,7 @@ for md_file in markdown_files:
                          count=1)
         
         content = re.sub(r'^(---\s*\n)', 
-                         rf'\n # {md_file} \n', 
+                         rf'\1 # {md_file}\n', 
                          content, 
                          count=2)
         
