@@ -104,17 +104,10 @@ for md_file in markdown_files:
         
         # Optional: Add 'layout: default' and 'mathjax: true' below the first '---' in the frontmatter
         content = re.sub(r'^(---\s*\n)', 
-                        rf'\1layout: default\nmathjax: true\n', 
+                        rf'\1layout: default\nmathjax: true\ntitle: {md_file.split('.')[0]}\n', 
                         content, 
                         count=1)
 
-        # Add the title below the second '---' in the frontmatter
-        content = re.sub(r'^(---\s*\n)', 
-                        rf'\1title: {md_file}\n', 
-                        content, 
-                        count=2)
-        
-        
 
     # Write the adjusted markdown file after the first processing step
     adjusted_md_file = os.path.join(curr_directory, f"{md_file}")

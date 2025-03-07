@@ -1,7 +1,7 @@
 ---
-title: 2024-10-17 Matching pursuit.md
 layout: default
 mathjax: true
+title: 2024-10-17 Matching pursuit
 tags: #conceptual
 ---
 Tags:  , 
