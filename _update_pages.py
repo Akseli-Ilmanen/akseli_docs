@@ -21,7 +21,7 @@ destination_directory = os.path.join(os.getcwd(), 'images')
 os.makedirs(destination_directory, exist_ok=True)
 
 # Regular expression to match Markdown image references
-image_reference_pattern = r'!\[\[([^]]+)\]\]'
+image_reference_pattern = r'!\[\[([^|\]]+)(?:\|[^]]+)?\]\]'
 
 # Get directory of markdown files to be copied
 os.chdir(os.path.join(three_levels_up, 'Projects', 'Copy to github pages'))
@@ -104,14 +104,10 @@ for md_file in markdown_files:
 
         # Optional: Add 'title: filename' below the first '---' in the frontmatter
         content = re.sub(r'^(---\s*\n)', 
-                         rf'\nlayout: default \nmathjax: true\n', 
+                         rf'\n title={md_file} layout: default \nmathjax: true\n', 
                          content, 
                          count=1)
         
-        content = re.sub(r'^(---\s*\n)', 
-                         rf'\1 # {md_file}\n', 
-                         content, 
-                         count=2)
         
 
     # Write the adjusted markdown file after the first processing step

@@ -1,5 +1,5 @@
 
-layout: default 
+ title=2024-09-17 Whitening data.md layout: default 
 mathjax: true
 tags: #conceptual
 ---
