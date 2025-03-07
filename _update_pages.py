@@ -86,6 +86,7 @@ for md_file in markdown_files:
     with open(md_file, 'r', encoding='utf-8') as file:
         content = file.read()
 
+
         # Find all image references and copy images to destination folder
         image_matches = re.findall(image_reference_pattern, content)
         for image_name in image_matches:
@@ -127,6 +128,12 @@ for md_file in markdown_files:
     # Write the final modified content back to the original file or new file
     final_md_file = os.path.join(curr_directory, f"{md_file}")
     with open(final_md_file, 'w', encoding='utf-8') as file:
+        print()
+        print()
         file.write(adjusted_content)
+        print(adjusted_content.splitlines()[:10])
+        print()
+        print()
+
 
     print(f"Second processing step complete for {md_file}. Final markdown saved as {final_md_file}")
