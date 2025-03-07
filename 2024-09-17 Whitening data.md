@@ -45,7 +45,7 @@ where:
 
 ![image](images/Pasted image 20250307171156.png)
 
-![image](images/2024-09-17 Whitening data 2024-09-18.excalidraw)
+<br>
 
 - bottom:  
 - ⚠️ Note during decorrelation step, covariance $$\rightarrow$$ 0 (implicit in definition of  ) and during ZCA whitening step $$\rightarrow$$ variance of each diagonal equals 1
@@ -79,4 +79,4 @@ def whitening_from_covariance(CC):
 #todo 
 - [ ]   understand relationship between eigenvector and change of basis and and dot product
 
-![image](images/2024-09-17 Whitening data 2024-09-18_0.excalidraw)
+<br>

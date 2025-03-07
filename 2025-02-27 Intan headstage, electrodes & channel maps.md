@@ -20,7 +20,7 @@ Tags:
 
 ![image](images/Pasted image 20250227185346.png)
 
-![image](images/2025-02-27 Intan headstage and channel maps 2025-02-27.excalidraw)
+<br>
 - ⚠️ P-1 & P-2/E-1 & E-2 $$\rightarrow$$ have the same contact ID configuration in terms of how they are organized above "omnetics print side" (electrode plugs)
 
 | ASSY-79 P-1 & P-2/E-1 & E-2 (contact ID) | Channelmap (inXX/A-0XX) |

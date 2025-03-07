@@ -64,7 +64,7 @@ git push -u origin main
 
 
 
-![image](images/2025-02-03 Init from local folder 2025-02-03_0.excalidraw)
+<br>
 
 
 <br>

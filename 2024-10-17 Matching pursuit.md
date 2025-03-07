@@ -22,7 +22,7 @@ $$
 ![image](images/Pasted image 20250307171258.png)
 
 
-![image](images/2024-10-17 Matching pursuit 2024-10-17.excalidraw)
+<br>
 
 
 
