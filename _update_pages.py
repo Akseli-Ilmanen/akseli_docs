@@ -39,13 +39,13 @@ replacements = {
     r'- &': '- 📚',
     r'!\[\[([^]]+)\]\]': r'![image](images/\1)',  # Convert image references to the new format
     r'\[\[([^]]+)\]\]': r' ',  # Remove markdown internal links
-    r'## ': '##',
+    r'##': '##',
     r'###': '##',
     r'####': '###',
     r'#####': '####',
     r'######': '#####',
     r'#######': '######',
-    r'########': '#######'
+    r'#########': '#######'
 
     
 
@@ -116,7 +116,7 @@ for md_file in markdown_files:
         adjusted_content = process_math_blocks_second(adjusted_content)
 
         # Matches lines that contain only spaces (or are completely empty) and replaces them with <br>
-        # adjusted_content = re.sub(r'^[ \t]*\n', '<br>\n', adjusted_content, flags=re.MULTILINE)
+        adjusted_content = re.sub(r'^[ \t]*\n', '<br>\n', adjusted_content, flags=re.MULTILINE)
 
     # Write the final modified content back to the original file or new file
     final_md_file = os.path.join(curr_directory, f"{md_file}")
