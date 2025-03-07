@@ -7,6 +7,8 @@ tags: #conceptual
 ---
 Tags: [[Tü - Introduction to Machine Learning]], [[2023-12-07 Covariance matrix]], [[2023-12-03 Eigenvalues & Eigenvectors]], [[2024-09-18 White noise]]
 
+
+
 ### ZCA whitening matrix.
 
 Steps:
@@ -51,6 +53,8 @@ where:
 - ⚠️ Note during decorrelation step, covariance $$\rightarrow$$ 0 (implicit in definition of [[2024-09-18 White noise]]) and during ZCA whitening step $$\rightarrow$$ variance of each diagonal equals 1
 
 
+
+
 ### Kilosort implementation
 
 `wrot` $$\rightarrow$$ $$W_{\text{ZCA}}$$
@@ -69,6 +73,8 @@ def whitening_from_covariance(CC):
     return Wrot
 
 ```
+
+
 
 
 

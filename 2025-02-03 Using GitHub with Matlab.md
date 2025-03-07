@@ -9,6 +9,8 @@ Tags: [[Crow project]]
 ![image](images/Pasted image 20250203171701.png)
 
 
+
+
 ### Set up github repository from folder
 
 -  `cd` to folder which you would like to upload to github
@@ -46,9 +48,13 @@ git remote add origin https://github.com/your-username/my-project.git
 git push -u origin main
 ```
 
+
+
 ### Push and commit
 
 - ⚠️ Use the `push_commit.bat` file to update commit and push changes from your local folder to the remote repository
+
+
 
 
 ### Compare versions & revert to earlier version
@@ -62,6 +68,8 @@ git push -u origin main
 
 
 ![image](images/2025-02-03 Init from local folder 2025-02-03_0.excalidraw)
+
+
 
 
 ### Clone and pull
