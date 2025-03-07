@@ -1,5 +1,6 @@
 ---
 title: 2024-09-17 Whitening data
+mathjax: true
 tags: #conceptual
 ---
 Tags: [[Tü - Introduction to Machine Learning]], [[2023-12-07 Covariance matrix]], [[2023-12-03 Eigenvalues & Eigenvectors]], [[2024-09-18 White noise]]
