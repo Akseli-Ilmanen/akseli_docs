@@ -2,7 +2,6 @@
 title: 2024-09-17 Whitening data
 layout: default 
 mathjax: true
-mathjax: true
 tags: #conceptual
 ---
 Tags:  ,  ,  ,  <br>

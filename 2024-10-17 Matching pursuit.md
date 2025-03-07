@@ -2,7 +2,6 @@
 title: 2024-10-17 Matching pursuit
 layout: default 
 mathjax: true
-mathjax: true
 tags: #conceptual
 ---
 Tags:  , <br>
