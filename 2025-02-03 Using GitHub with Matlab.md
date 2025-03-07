@@ -1,5 +1,4 @@
----
-title: 2025-02-03 Using GitHub with Matlab
+
 layout: default 
 mathjax: true
 tags: #project

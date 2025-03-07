@@ -1,5 +1,4 @@
----
-title: 2024-09-17 Whitening data
+
 layout: default 
 mathjax: true
 tags: #conceptual

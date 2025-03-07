@@ -104,9 +104,15 @@ for md_file in markdown_files:
 
         # Optional: Add 'title: filename' below the first '---' in the frontmatter
         content = re.sub(r'^(---\s*\n)', 
-                         rf'\1title: {os.path.splitext(md_file)[0]}\nlayout: default \nmathjax: true\n', 
+                         rf'\nlayout: default \nmathjax: true\n', 
                          content, 
                          count=1)
+        
+        content = re.sub(r'^(---\s*\n)', 
+                         rf'\n # {md_file} \n', 
+                         content, 
+                         count=2)
+        
 
     # Write the adjusted markdown file after the first processing step
     adjusted_md_file = os.path.join(curr_directory, f"{md_file}")
@@ -128,12 +134,8 @@ for md_file in markdown_files:
     # Write the final modified content back to the original file or new file
     final_md_file = os.path.join(curr_directory, f"{md_file}")
     with open(final_md_file, 'w', encoding='utf-8') as file:
-        print()
-        print()
         file.write(adjusted_content)
-        print(adjusted_content.splitlines()[:10])
-        print()
-        print()
+
 
 
     print(f"Second processing step complete for {md_file}. Final markdown saved as {final_md_file}")
