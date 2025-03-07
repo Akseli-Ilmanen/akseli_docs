@@ -1,9 +1,9 @@
----<br>
-title: 2024-12-16 Sync zotero with overleaf over onedrive<br>
-layout: default <br>
-mathjax: true<br>
-tags: #conceptual<br>
----<br>
+---
+title: 2024-12-16 Sync zotero with overleaf over onedrive
+layout: default 
+mathjax: true
+tags: #conceptual
+---
 Steps<br>
 <br>
 1. Zotero export specific folder as bibtext file to onedrive folder<br>

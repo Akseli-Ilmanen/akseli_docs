@@ -1,10 +1,10 @@
----<br>
-title: 2024-09-17 Whitening data<br>
-layout: default <br>
-mathjax: true<br>
-mathjax: true<br>
-tags: #conceptual<br>
----<br>
+---
+title: 2024-09-17 Whitening data
+layout: default 
+mathjax: true
+mathjax: true
+tags: #conceptual
+---
 Tags:  ,  ,  ,  <br>
 <br>
 <br><br>

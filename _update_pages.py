@@ -115,7 +115,8 @@ for md_file in markdown_files:
         adjusted_content = process_math_blocks_second(adjusted_content)
 
         # Place breakpoint in empty lines, so empty lines are rendered
-        adjusted_content = re.sub(r'\n', '<br>\n', adjusted_content, flags=re.MULTILINE)
+        # Only replace newlines after the first '---' block
+        adjusted_content = re.sub(r'^(---\s*\n.*?\n---\s*\n)(.*)', lambda m: m.group(1) + re.sub(r'\n', '<br>\n', m.group(2), flags=re.MULTILINE), adjusted_content, flags=re.DOTALL)
 
     # Write the final modified content back to the original file or new file
     final_md_file = os.path.join(curr_directory, f"{md_file}")

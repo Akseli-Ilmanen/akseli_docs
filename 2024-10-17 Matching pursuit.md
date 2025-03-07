@@ -1,10 +1,10 @@
----<br>
-title: 2024-10-17 Matching pursuit<br>
-layout: default <br>
-mathjax: true<br>
-mathjax: true<br>
-tags: #conceptual<br>
----<br>
+---
+title: 2024-10-17 Matching pursuit
+layout: default 
+mathjax: true
+mathjax: true
+tags: #conceptual
+---
 Tags:  , <br>
 - 📚 1993, Mallat and Zhang, [Matching pursuit - Wikipedia](https://en.wikipedia.org/wiki/Matching_pursuit)<br>
 - 📚 Good youtube video: https://www.youtube.com/watch?v=RFo068s8_jU<br>

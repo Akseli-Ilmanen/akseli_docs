@@ -1,9 +1,9 @@
----<br>
-title: 2025-02-03 Using GitHub with Matlab<br>
-layout: default <br>
-mathjax: true<br>
-tags: #project<br>
----<br>
+---
+title: 2025-02-03 Using GitHub with Matlab
+layout: default 
+mathjax: true
+tags: #project
+---
 Tags:  <br>
 <br>
 ![image](images/Pasted image 20250203171701.png)<br>

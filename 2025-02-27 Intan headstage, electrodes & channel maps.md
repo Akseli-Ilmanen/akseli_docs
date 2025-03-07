@@ -1,9 +1,9 @@
----<br>
-title: 2025-02-27 Intan headstage, electrodes & channel maps<br>
-layout: default <br>
-mathjax: true<br>
-tags: #project<br>
----<br>
+---
+title: 2025-02-27 Intan headstage, electrodes & channel maps
+layout: default 
+mathjax: true
+tags: #project
+---
 Tags:  <br>
 - 📚 ADXL355 accelerometer: [Accelerometer Calibration](https://intantech.com/files/Intan_RHD2000_accelerometer_calibration.pdf) & [ADXL354/ADXL355 (Rev. A)](https://www.analog.com/media/en/technical-documentation/data-sheets/adxl354_355.pdf) <br>
 - 📚 RHD 2132: https://intantech.com/files/Intan_RHD2000_series_datasheet.pdf<br>
