@@ -38,18 +38,17 @@ replacements = {
     r'- yes': '- ✅',
     r'- &': '- 📚',
     r'!\[\[([^]]+)\]\]': r'![image](images/\1)',  # Convert image references to the new format
+    }
+
+heading_replacements = {
     r'^### (.*)': r'\n\n## \1',
     r'^#### (.*)': r'\n\n### \1',
     r'^##### (.*)': r'\n\n#### \1',
     r'^###### (.*)': r'\n\n##### \1',
     r'^####### (.*)': r'\n\n###### \1',
-    r'^######## (.*)': r'\n\n####### \1',
+    r'^######## (.*)': r'\n\n####### \1'
+    }
 
-
-
-
-    
-}
 
 # Function to process math blocks by temporarily replacing $$ blocks
 def process_math_blocks_first(content):
@@ -89,6 +88,9 @@ for md_file in markdown_files:
         # Apply the replacements for other patterns (such as - !, - no, etc.)
         for pattern, replacement in replacements.items():
             content = re.sub(pattern, replacement, content)
+
+        for pattern, repl in heading_replacements.items():
+            content = re.sub(pattern, repl, content, flags=re.MULTILINE) 
 
         # Step 1: Process math blocks by replacing $$ blocks with placeholders
         content = process_math_blocks_first(content)
