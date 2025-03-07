@@ -68,22 +68,6 @@ def process_math_blocks_second(content):
     return content
 
 
-def remove_newlines_and_insert_breakpoints(text):
-    """
-    1. Split text by newlines.
-    2. If the line is empty, replace it with "breakpoint".
-    3. Otherwise, keep the line as-is.
-    4. Join everything with a single space.
-    """
-    lines = text.split('\n')
-    transformed = []
-    for line in lines:
-        # Check if the line is empty or only whitespace
-        if not line.strip():
-            transformed.append("<br>")
-        else:
-            transformed.append(line)
-    return " ".join(transformed)
 
 
 # Iterate through each Markdown file
@@ -132,7 +116,7 @@ for md_file in markdown_files:
         adjusted_content = process_math_blocks_second(adjusted_content)
 
         # Place breakpoint in empty lines, so empty lines are rendered
-        adjusted_content = remove_newlines_and_insert_breakpoints(adjusted_content)
+        adjusted_content = re.sub(r'\n \n', '\n<br>\n', adjusted_content, flags=re.MULTILINE)
 
     # Write the final modified content back to the original file or new file
     final_md_file = os.path.join(curr_directory, f"{md_file}")
