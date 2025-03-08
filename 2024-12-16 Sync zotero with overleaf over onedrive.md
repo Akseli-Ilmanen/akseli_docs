@@ -1,5 +1,4 @@
 ---
-layout: default
 mathjax: true
 title: 2024-12-16 Sync zotero with overleaf over onedrive
 tags: #conceptual
