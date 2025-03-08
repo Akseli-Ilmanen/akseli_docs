@@ -40,6 +40,7 @@ replacements = {
     r'!\[\[.*\.excalidraw\]\]': r' ',  # Remove excalidraw references
     r'!\[\[([^]]+)\]\]': r'![image](images/\1)',  # Convert image references to the new format
     r'\[\[([^]]+)\]\]': r' ',  # Remove markdown internal links
+    r'Tags:': ' ',  # Remove tags
     r'###': '<br>\n##',
     r'####': '<br>\n###',
     r'#####': '<br>\n####',

@@ -3,7 +3,7 @@ mathjax: true
 title: 2024-10-17 Matching pursuit
 tags: #conceptual
 ---
-Tags:  , 
+   , 
 - 📚 1993, Mallat and Zhang, [Matching pursuit - Wikipedia](https://en.wikipedia.org/wiki/Matching_pursuit)
 - 📚 Good youtube video: https://www.youtube.com/watch?v=RFo068s8_jU
 

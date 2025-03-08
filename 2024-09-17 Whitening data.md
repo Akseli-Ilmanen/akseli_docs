@@ -3,7 +3,7 @@ mathjax: true
 title: 2024-09-17 Whitening data
 tags: #conceptual
 ---
-Tags:  ,  ,  ,  
+   ,  ,  ,  
 
 <br>
 ### ZCA whitening matrix.

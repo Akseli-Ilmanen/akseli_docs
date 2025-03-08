@@ -3,7 +3,7 @@ mathjax: true
 title: 2025-02-27 Intan headstage, electrodes & channel maps
 tags: #project
 ---
-Tags:  
+   
 - 📚 ADXL355 accelerometer: [Accelerometer Calibration](https://intantech.com/files/Intan_RHD2000_accelerometer_calibration.pdf) & [ADXL354/ADXL355 (Rev. A)](https://www.analog.com/media/en/technical-documentation/data-sheets/adxl354_355.pdf) 
 - 📚 RHD 2132: https://intantech.com/files/Intan_RHD2000_series_datasheet.pdf
 - 📚 Cambridge Neurotech dimensions: [Cambridge NeuroTech Product Catalog | PDF](https://www.scribd.com/document/771039846/Cambridge-NeuroTech-Product-Catalog)
