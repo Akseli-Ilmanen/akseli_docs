@@ -9,6 +9,8 @@ tags: #conceptual
 
 <br>
 ### Outcome of ("vertical") drift correction
+
+![image](images/Pasted image 20250309155153.png)
 <br>
 
 <br>
@@ -27,6 +29,10 @@ tags: #conceptual
  - ⚠️ There are two drift estimation strategies: One can assume that there is 1) consistent drift across the probe (**rigid estimation**) or it  2) varies as a function of depth (**nonrigid** **estimation**). E.g. drift may differ in cortical vs sub-cortical regions, therefore nonrigid estimation is useful here.
  - The steps above are for rigid estimation, but to do nonrigid estimation, the steps can be adapted by splitting the batches into segments by vertical position $$y$$ (along the probe), 
 
+
+![image](images/Pasted image 20250309155208.png)
+![image](images/Pasted image 20250309155216.png)
+![image](images/Pasted image 20250309155224.png)
 <br>
 ![image](images/Pasted image 20241019203516.png | 400)
 [Kriging - Wikipedia](https://en.wikipedia.org/wiki/Kriging)
