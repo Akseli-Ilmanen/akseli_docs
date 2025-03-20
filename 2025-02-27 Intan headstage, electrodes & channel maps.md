@@ -8,10 +8,13 @@ tags: #project
 - 📚 RHD 2132: https://intantech.com/files/Intan_RHD2000_series_datasheet.pdf
 - 📚 Cambridge Neurotech dimensions: [Cambridge NeuroTech Product Catalog | PDF](https://www.scribd.com/document/771039846/Cambridge-NeuroTech-Product-Catalog)
 
+
 | Name              | Num channels | Company             | Manual                                                                                             |
 | ----------------- | ------------ | ------------------- | -------------------------------------------------------------------------------------------------- |
 | ASSY-79 E-1 & E-2 | 16           | Cambridge Neurotech | [ASSY-79-E-1-E-2-map.pdf](https://www.cambridgeneurotech.com/assets/files/ASSY-79-E-1-E-2-map.pdf) |
 | ASSY-79 P-1 & P-2 | 16           | Cambridge Neurotech | [ASSY-79-P-1-P-2-map.pdf](https://www.cambridgeneurotech.com/assets/files/ASSY-79-P-1-P-2-map.pdf) |
+
+
 
 ![image](images/Pasted image 20250227185300.png)
 
@@ -50,3 +53,8 @@ chanMap = np.array([20, 19, 21, 18, 22, 17, 23, 16, 8, 15, 9, 14, 10, 13, 11, 12
 
 ![image](images/Pasted image 20250227185402.png)
 
+
+
+<br>
+### 16ch headstage
+ 
