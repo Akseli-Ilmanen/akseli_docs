@@ -5,7 +5,7 @@ tags: #project
 ---
 <br>
 ## Folder structure
-![image](images/Pasted image 20250408103929.png|400)
+![image](images/Pasted image 20250408103929.png)
 In the lab, we adhere to this folder structure as it provides a neat sub-division between raw data and derived data (e.g. analysis). This has a coupe of advantages, e.g it makes sure that raw data does not get corrupted. You can read more about the **NeuroBlueprint** here: https://neuroblueprint.neuroinformatics.dev/latest/index.html.
 
 
@@ -14,6 +14,7 @@ In the lab, we adhere to this folder structure as it provides a neat sub-divisio
 ## Data backup and file transfer
 
 The **NeuroBlueprint** file structure can also be managed via the python library `datashuttle` (see more here https://datashuttle.neuroinformatics.dev/.)
+
 
 Our data backup & file transfer consist of three parts:
 
@@ -32,6 +33,7 @@ Given that file paths will differ across devices, you have to specify them for e
 - `rigid_backup_data_folder` $$\rightarrow$$ file path where raw data will first be backed-up (Stationary Ext/Left)
 
 
+
 - ✅ **Working folders** can be changed more dynamically depending on from where/how you would like to analyze the data:
 - For example, if you want to work directly with the data from your remote BackupWork/BackupHome hard drive, it is enough to specify the `working_backup_data_folder`.  
 - Alternatively, you can also use `dattashuttle` functions to download the data to a temporary `working_local_data_folder`, and then work with the data locally.
@@ -41,15 +43,15 @@ Given that file paths will differ across devices, you have to specify them for e
 ## New user/new bird
 
 If new experiments join the project, we need to:
-1) Add the user to `Desktop/user_paths.json`
-2) Add new datashuttle project in `pipeline/functions/file_utils/new_user_datashuttle.ipynb`
-3) Adjust if statements ``pipeline/functions/file_utils/datashuttle_utils.py``
-4) Set-up scripts in Personal backup.
+- Add the user to `Desktop/user_paths.json`
+- Add new datashuttle project in `pipeline/functions/file_utils/new_user_datashuttle.ipynb`
+- Adjust if statements ``pipeline/functions/file_utils/datashuttle_utils.py``
+- Set-up scripts in Personal backup.
 
 
 If a new bird joins the project, we need to
-1) Adjust if statemetns in ``pipeline/functions/file_utils/datashuttle_utils.py``
-2) Adjust if statements in ``pipeline/functions/file_utils/get_session_path.m``
+- Adjust if statemetns in ``pipeline/functions/file_utils/datashuttle_utils.py``
+- Adjust if statements in ``pipeline/functions/file_utils/get_session_path.m``
 
 <br>
 ## Matlab AddPath
