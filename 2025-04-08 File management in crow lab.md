@@ -21,6 +21,7 @@ Our data backup & file transfer consist of three parts:
 2) Use [Personal-Backup](https://personal-backup.rathlev-home.de/) to backup files from acquisition machine to 'Stationary' hard drives, and then from there to 'Backup Work/Home' hard drives
 3) Once files are in 'Backup Work/Home', you can manually copy folders to analysis machines or use `datashuttle` functions to do so 
 
+![image](images/Pasted image 20250408114251.png)
 <br>
 
 Given that file paths will differ across devices, you have to specify them for each machine separately in `Desktop/user_paths.json`. You can specify the following locations:
@@ -53,6 +54,7 @@ If a new bird joins the project, we need to
 <br>
 ## Matlab AddPath
 
+![image](images/Pasted image 20250408114300.png)
 <br>
 
 In the `Desktop/user_paths.json` file, you can also specify the locations of your code. If you add the following lines of code to your script. This will add all the functions in those folders and sub-directories to your Matlab path.
