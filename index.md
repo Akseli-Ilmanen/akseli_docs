@@ -12,6 +12,7 @@ Spike Sorting
 
 
 Utils
+- [Set up new pc in crow lab](2025-05-08 Crow lab - set up new PC)
 - [File management in crow lab](2025-04-08 File management in crow lab)
 - [Sync zotero with overleaf over onedrive](2024-12-16 Sync zotero with overleaf over onedrive.md)
 - [Using GitHub with Matlab](2025-02-03 Using GitHub with Matlab.md)
