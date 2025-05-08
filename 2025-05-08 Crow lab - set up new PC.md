@@ -8,13 +8,14 @@ tags: #project
 - Install Matlab
 	- Install the following toolboxes: Signal Processing Toolbox, Curve fitting toolbox, Statistics and Machine Learning Toolbox
 - Install Anaconda
+	- Recommendation: In case you don't use Python already on this machine, I would during the installation "Add Anaconda to the Path Environment Variable"
 - Install Git 
-	- See also: [2025-02-03 Using GitHub with Matlab | Akseli Docs](https://akseli-ilmanen.github.io/akseli_docs/2025-02-03%20Using%20GitHub%20with%20Matlab.html)
+	- See also: [2025-02-03 Using GitHub with Matlab - Akseli Docs](https://akseli-ilmanen.github.io/akseli_docs/2025-02-03%20Using%20GitHub%20with%20Matlab.html)
 - Install VSCode or another Python code editor
 
 <br>
 ### File management
-- ⚠️ For an overview, of how we maintain our files, see: [2025-04-08 File management in crow lab | Akseli Docs](https://akseli-ilmanen.github.io/akseli_docs/2025-04-08%20File%20management%20in%20crow%20lab)
+- ⚠️ For an overview, of how we maintain our files, see: [2025-04-08 File management in crow lab - Akseli Docs](https://akseli-ilmanen.github.io/akseli_docs/2025-04-08%20File%20management%20in%20crow%20lab)
 - This file structure is also (partially compatible) with the [datashuttle libary](https://datashuttle.neuroinformatics.dev/) 
 
 - Add `user_paths.json` to file location `Desktop/user_paths.json`
