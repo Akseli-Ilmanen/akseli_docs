@@ -6,7 +6,7 @@ tags: #project
 <br>
 ### General
 - Install Matlab
-	- Install the following toolboxes: Signal Processing Toolbox, Curve fitting toolbox, Statistics and Machine Learning Toolbox
+	- Install the following toolboxes: Signal Processing Toolbox, Curve fitting toolbox, Statistics and Machine Learning Toolbox, Image processing toolbox
 - Install Anaconda
 	- Recommendation: In case you don't use Python already on this machine, I would during the installation "Add Anaconda to the Path Environment Variable"
 - Install Git 
@@ -16,12 +16,15 @@ tags: #project
 <br>
 ### File management
 - ⚠️ For an overview, of how we maintain our files, see: [2025-04-08 File management in crow lab - Akseli Docs](https://akseli-ilmanen.github.io/akseli_docs/2025-04-08%20File%20management%20in%20crow%20lab)
-- This file structure is also (partially compatible) with the [datashuttle libary](https://datashuttle.neuroinformatics.dev/) 
+
 
 - Add `user_paths.json` to file location `Desktop/user_paths.json`
 - [Here](https://drive.google.com/file/d/1MoUN2TgFkYdIDaFjV-jUbFFC26eJfYpq/view?usp=sharing) is a template for `user_paths.json`. Make sure to end each line with `\\",`, except for the last key value pair where the `,` is omitted. 
 
 
+<br>
+### Datashuttle (optional)
+- Our NeuroBluePrint file structure is also (partially compatible) with the [datashuttle libary](https://datashuttle.neuroinformatics.dev/) 
 
 To install S, please follow the following steps in the terminal:
 ```cmd
@@ -32,7 +35,6 @@ conda install -c conda-forge rclone
 ```
 
 - ⚠️ For further steps, see: [Pipeline_Akseli/functions/file_utils/new_user.iypnb](https://github.com/Akseli-Ilmanen/Pipeline_Akseli/blob/main/functions/file_utils/new_user_datteshuttle.ipynb) and documentation of [datashuttle libary](https://datashuttle.neuroinformatics.dev/) 
-
 
 
 <br>

@@ -19,7 +19,9 @@ The **NeuroBlueprint** file structure can also be managed via the python library
 Our data backup & file transfer consist of three parts:
 
 1) Use `datashuttle` to create folder structure for individual session (see ``pipeline/functions/file_utils/datashuttle_utils.py``)
+
 2) Use [Personal-Backup](https://personal-backup.rathlev-home.de/) to backup files from acquisition machine to 'Stationary' hard drives, and then from there to 'Backup Work/Home' hard drives
+
 3) Once files are in 'Backup Work/Home', you can manually copy folders to analysis machines or use `datashuttle` functions to do so 
 
 ![image](images/Pasted image 20250408114251.png)

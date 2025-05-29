@@ -9,11 +9,29 @@ tags: #project
 - 📚 Cambridge Neurotech dimensions: [Cambridge NeuroTech Product Catalog | PDF](https://www.scribd.com/document/771039846/Cambridge-NeuroTech-Product-Catalog)
 
 
-| Name              | Num channels | Company             | Manual                                                                                             |
-| ----------------- | ------------ | ------------------- | -------------------------------------------------------------------------------------------------- |
-| ASSY-79 E-1 & E-2 | 16           | Cambridge Neurotech | [ASSY-79-E-1-E-2-map.pdf](https://www.cambridgeneurotech.com/assets/files/ASSY-79-E-1-E-2-map.pdf) |
-| ASSY-79 P-1 & P-2 | 16           | Cambridge Neurotech | [ASSY-79-P-1-P-2-map.pdf](https://www.cambridgeneurotech.com/assets/files/ASSY-79-P-1-P-2-map.pdf) |
+<br>
+### Probes
 
+| Name               | Num channels | Company             | Manual                                                                                               |
+| ------------------ | ------------ | ------------------- | ---------------------------------------------------------------------------------------------------- |
+| ASSY-79 E-1 & E-2  | 16           | Cambridge Neurotech | [ASSY-79-E-1-E-2-map.pdf](https://www.cambridgeneurotech.com/assets/files/ASSY-79-E-1-E-2-map.pdf)   |
+| ASSY-79 P-1 & P-2  | 16           | Cambridge Neurotech | [ASSY-79-P-1-P-2-map.pdf](https://www.cambridgeneurotech.com/assets/files/ASSY-79-P-1-P-2-map.pdf)   |
+| ASSY-156 E-1 & E-2 | 64           | Cambridge Neurotech | [ASSY-156-E-1-E-2-map.pdf](https://www.cambridgeneurotech.com/assets/files/ASSY-156-E-1-E-2-map.pdf) |
+
+
+<br>
+### Headstages
+
+
+| Name                                | Company | Manual                                                                     |     |
+| ----------------------------------- | ------- | -------------------------------------------------------------------------- | --- |
+| RHD 64-Channel Recording Headstages | Intan   | [Link](https://intantech.com/RHD_headstages.html?tabSelect=RHD64ch&yPos=0) |     |
+
+
+
+
+<br>
+### How to get `ChanMap`
 
 
 ![image](images/Pasted image 20250227185300.png)
@@ -56,5 +74,9 @@ chanMap = np.array([20, 19, 21, 18, 22, 17, 23, 16, 8, 15, 9, 14, 10, 13, 11, 12
 
 
 <br>
-### 16ch headstage
- 
+### Intan 16ch headstage
+<br>
+
+
+<br>
+### 64 Headstage
